@@ -1,3 +1,3 @@
-import { JoystickHandler } from "./JoystickHandler";
+import { Joystick } from "./Joystick";
 
-(<any>window).JoystickHandler = JoystickHandler;
+(<any>window).Joystick = Joystick;

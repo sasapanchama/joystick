@@ -5,7 +5,7 @@ export interface JoystickData {
 }
 
 // This class handles the joystick element.
-export class JoystickHandler {
+export class Joystick {
   $container: HTMLElement;
   $outerCircle: HTMLElement;
   $innerCircle: HTMLElement;
@@ -19,7 +19,7 @@ export class JoystickHandler {
 
     // Create the outer circle element.
     this.$outerCircle = document.createElement("div");
-    this.$outerCircle.id = "JoystickHandler__OuterCircle";
+    this.$outerCircle.id = "Joystick__OuterCircle";
     this.$outerCircle.style.margin = "0 auto";
     this.$outerCircle.style.width = "240px";
     this.$outerCircle.style.height = "240px";
@@ -31,7 +31,7 @@ export class JoystickHandler {
 
     // Create the inner circle element.
     this.$innerCircle = document.createElement("div");
-    this.$innerCircle.id = "JoystickHandler__InnerCircle";
+    this.$innerCircle.id = "Joystick__InnerCircle";
     this.$innerCircle.style.width = "120px";
     this.$innerCircle.style.height = "120px";
     this.$innerCircle.style.boxSizing = "border-box";

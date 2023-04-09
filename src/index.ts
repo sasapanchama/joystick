@@ -1,1 +1,1 @@
-export * from "./JoystickHandler";
+export * from "./Joystick";

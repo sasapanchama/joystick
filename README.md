@@ -1,11 +1,11 @@
-# joystick-handler
+# @sasapanchama/joystick
 
 ## How to use
 
 ``` sample.bash
-$ npm install joystick-handler
+$ npm i @sasapanchama/joystick
 or
-$ yarn add joystick-handler
+$ yarn add @sasapanchama/joystick
 ```
 
 ``` index.html
@@ -14,18 +14,18 @@ $ yarn add joystick-handler
 
 
 ``` script.ts
-import { JoystickHandler } from "joystick-handler";  
+import { Joystick } from "@sasapanchama/joystick";  
 
 const container = document.getElementById("container");  
 
-const joystickHandler = new JoystickHandler(container);  
+const joystick = new Joystick(container);  
 
-joystickHandler.$outerCircle.addEventListener("touchmove", (event) => {  
-  const { angle, velocity } = joystickHandler.handleTouchMoveEvent(event);  
+joystick.$outerCircle.addEventListener("touchmove", (event) => {  
+  const { angle, velocity } = joystick.handleTouchMoveEvent(event);  
 });  
 
-joystickHandler.$outerCircle.addEventListener("touchend", () => {  
-  const { angle, velocity } = joystickHandler.handleTouchEndEvent();  
+joystick.$outerCircle.addEventListener("touchend", () => {  
+  const { angle, velocity } = joystick.handleTouchEndEvent();  
 });  
 ```
 
