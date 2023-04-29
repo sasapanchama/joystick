@@ -11,10 +11,12 @@
     const container = document.getElementById("container");
     const joystick = new Joystick(container);
     joystick.$outerCircle.addEventListener("touchmove", (event) => {
-      const { angle, velocity } = joystick.handleTouchMoveEvent(event);
+      const { sin, cos, radians, degrees, angle, velocity } = joystick.handleTouchMoveEvent(event);
+      console.log(sin, cos, radians, degrees, angle, velocity);
     });
     joystick.$outerCircle.addEventListener("touchend", () => {
-      const { angle, velocity } = joystick.handleTouchEndEvent();
+      const { sin, cos, radians, degrees, angle, velocity } = joystick.handleTouchEndEvent();
+      console.log(sin, cos, radians, degrees, angle, velocity);
     });
   </script>
 </body>
