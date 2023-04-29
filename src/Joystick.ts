@@ -1,5 +1,9 @@
 // This interface defines the data structure for joystick inputs.
 export interface JoystickData {
+  sin: number;
+  cos: number;
+  radians: number;
+  degrees: number;
   angle: number | null;
   velocity: number;
 }
@@ -95,12 +99,12 @@ export class Joystick {
     this.$innerCircle.style.left = `${touchX}px`;
     this.$innerCircle.style.top = `${touchY}px`;
 
-    return { angle: sin > 0 ? degrees : -degrees, velocity: absV2 };
+    return { sin, cos, radians, degrees, angle: sin > 0 ? degrees : -degrees, velocity: absV2 };
   }
 
   public handleTouchEndEvent(): JoystickData {
     this.$innerCircle.style.left = `0px`;
     this.$innerCircle.style.top = `0px`;
-    return { angle: null, velocity: 0 };
+    return { sin: 0, cos: 0, radians: 0, degrees: 0, angle: null, velocity: 0 };
   }
 }
